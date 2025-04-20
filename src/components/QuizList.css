@@ -1,0 +1,217 @@
+/* QuizList.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #dfe9f3, #ffffff);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.quiz-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.result {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.quiz-item {
+  background-color: #f8f9fa;
+  border: 1px solid #e1e1e1;
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+
+.quiz-item:hover {
+  background-color: #f1f3f5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.question {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.answer {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.option-list {
+  list-style: none;
+}
+
+.option-button {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin-bottom: 8px;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.option-button:hover:not(:disabled) {
+  background-color: #e9f5ff;
+  border-color: #339af0;
+}
+
+.option-button.selected {
+  font-weight: 600;
+}
+
+.option-button.correct {
+  background-color: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+}
+
+.option-button.incorrect {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+.submit-button {
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.custom-button-group {
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.custom-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #4c6ef5, #5f87ff);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.3s ease;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(76, 110, 245, 0.3);
+}
+
+.custom-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #3b5bdb, #4c6ef5);
+  color: #fff;
+  text-decoration: none;
+}
+
+.custom-btn:active {
+  transform: scale(0.96);
+}
+
+.custom-btn svg {
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-dialog {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.custom-btn {
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-btn:hover {
+  transform: scale(1.03);
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f5ff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #333;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.custom-submit-btn {
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.25s ease-in-out;
+}
+
+.custom-submit-btn:hover {
+  transform: scale(1.05);
+  background-color: #0d6efd !important;
+  color: white !important;
+}
